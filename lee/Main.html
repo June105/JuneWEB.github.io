@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이준하의 과제</title>
+    <link rel="stylesheet" href="Main.css" />
+  </head>
+  <body>
+    <header>
+      <div class="title"><span>50 Years</span></div>
+      <div class="nav">
+        <div class="main navItem selected">Main</div>
+        <div class="history navItem">History</div>
+        <div class="fashion navItem">Fashion</div>
+        <div class="technology navItem">Technology</div>
+      </div>
+    </header>
+
+    <main>
+      <div class="main_main">
+        <div class="mainPageContainer">
+          <div class="mainBtn mainHisBtn">History</div>
+          <div class="mainBtn mainFasBtn">Fashion</div>
+          <div class="mainBtn mainTechBtn">Technology</div>
+        </div>
+      </div>
+      <div class="main_his content">
+        <div class="hisDetailContainer">
+          <iframe class="detail hidden" src="./history_2020.html"></iframe>
+        </div>
+        <div class="container">
+          <div class="mainPageTitle">History</div>
+          <div class="btnContainer">
+            <a href="./history_2020.html"> <div class="btn">2020</div></a>
+            <a href="./history_2010.html"> <div class="btn">2010</div></a>
+            <a href="./history_2000.html"> <div class="btn">2000</div></a>
+            <a href="./history_1990.html"> <div class="btn">1990</div></a>
+            <a href="./history_1980.html"> <div class="btn">1980</div></a>
+          </div>
+          <iframe
+            class="news"
+            src="https://www.hani.co.kr/arti/SERIES/1026/home01.html"
+          ></iframe>
+        </div>
+      </div>
+      <div class="main_fash content">
+        <div class="fashDetailContainer">
+          <iframe class="detail hidden" src="./history_2020.html"></iframe>
+        </div>
+        <div class="container">
+          <div class="mainPageTitle">Fashion</div>
+          <div class="btnContainer">
+            <a href="./fashion_2020.html"> <div class="btn">2020</div></a>
+            <a href="./fashion_2010.html"> <div class="btn">2010</div></a>
+            <a href="./fashion_2000.html"> <div class="btn">2000</div></a>
+            <a href="./fashion_1990.html"> <div class="btn">1990</div></a>
+            <a href="./fashion_1980.html"> <div class="btn">1980</div></a>
+          </div>
+          <iframe
+            class="news"
+            src="http://m.apparelnews.co.kr/"
+          ></iframe>
+        </div>
+      </div>
+      <div class="main_tech content">
+        <div class="techDetailContainer">
+          <iframe class="detail hidden" src="./history_2020.html"></iframe>
+        </div>
+        <div class="container">
+          <div class="mainPageTitle">Technology</div>
+          <div class="btnContainer">
+            <a href="./tech_2020.html"> <div class="btn">2020</div></a>
+            <a href="./tech_2010.html"> <div class="btn">2010</div></a>
+            <a href="./tech_2000.html"> <div class="btn">2000</div></a>
+            <a href="./tech_1990.html"> <div class="btn">1990</div></a>
+            <a href="./tech_1980.html"> <div class="btn">1980</div></a>
+          </div>
+          <iframe
+            class="news"
+            src="https://www.sciencetimes.co.kr/category/sci-tech/"
+          ></iframe>
+        </div>
+      </div>
+    </main>
+    <script>
+      const navMain = document.querySelector(".main");
+      const navHistory = document.querySelector(".history");
+      const navFashion = document.querySelector(".fashion");
+      const navTech = document.querySelector(".technology");
+
+      const mainMain = document.querySelector(".main_main");
+      const mainHis = document.querySelector(".main_his");
+      const mainFash = document.querySelector(".main_fash");
+      const mainTech = document.querySelector(".main_tech");
+
+      const mainClass = document.querySelector(".main").classList;
+      const historyClass = document.querySelector(".history").classList;
+      const fashionClass = document.querySelector(".fashion").classList;
+      const techClass = document.querySelector(".technology").classList;
+
+      const mainMainClass = mainMain.classList;
+      const mainHisClass = mainHis.classList;
+      const mainFashClass = mainFash.classList;
+      const mainTechClass = mainTech.classList;
+
+      const mainHisBtn = document.querySelector(".mainHisBtn");
+      const mainFasBtn = document.querySelector(".mainFasBtn");
+      const mainTechBtn = document.querySelector(".mainTechBtn");
+
+      function onHistoryClick() {
+        historyClass.add("selected");
+        mainClass.remove("selected");
+        fashionClass.remove("selected");
+        techClass.remove("selected");
+
+        mainHisClass.remove("content");
+        mainFashClass.add("content");
+        mainMainClass.add("content");
+        mainTechClass.add("content");
+      }
+      function onMainClick() {
+        historyClass.remove("selected");
+        mainClass.add("selected");
+        fashionClass.remove("selected");
+        techClass.remove("selected");
+
+        mainHisClass.add("content");
+        mainFashClass.add("content");
+        mainMainClass.remove("content");
+        mainTechClass.add("content");
+      }
+      function onFashionClick() {
+        historyClass.remove("selected");
+        mainClass.remove("selected");
+        fashionClass.add("selected");
+        techClass.remove("selected");
+
+        mainHisClass.add("content");
+        mainFashClass.remove("content");
+        mainMainClass.add("content");
+        mainTechClass.add("content");
+      }
+      function onTechClick() {
+        historyClass.remove("selected");
+        mainClass.remove("selected");
+        fashionClass.remove("selected");
+        techClass.add("selected");
+
+        mainHisClass.add("content");
+        mainFashClass.add("content");
+        mainMainClass.add("content");
+        mainTechClass.remove("content");
+      }
+
+      navHistory.addEventListener("click", onHistoryClick);
+      navMain.addEventListener("click", onMainClick);
+      navTech.addEventListener("click", onTechClick);
+      navFashion.addEventListener("click", onFashionClick);
+
+      mainHisBtn.addEventListener("click", onHistoryClick);
+      mainFasBtn.addEventListener("click", onFashionClick);
+      mainTechBtn.addEventListener("click", onTechClick);
+    </script>
+  </body>
+</html>

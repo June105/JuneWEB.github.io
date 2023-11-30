@@ -1,0 +1,39 @@
+.detailContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+}
+.detailTitle {
+  width: 100%;
+  padding: 0.2em;
+  text-align: center;
+  font-size: 3.5em;
+  font-weight: 600;
+  border-bottom: 5px solid #fe9534;
+}
+.eventIndx {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 2.5em;
+  font-weight: bolder;
+}
+.youtubeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+.youtube {
+  width: 50%;
+  height: 400px;
+}
+.explainContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.explain {
+  margin-right: 30px;
+  width: 700px;
+}

@@ -1,0 +1,137 @@
+@keyframes colorAnimation {
+  50% {
+    color: whitesmoke;
+    text-shadow: -1px -1px 0 #4a4a4a, 1px -1px 0 #4a4a4a, -1px 1px 0 #4a4a4a,
+      1px 1px 0 #4a4a4a;
+    border-bottom: 5px solid black;
+  }
+  100% {
+    color: #fe9534;
+    text-shadow: -1px -1px 0 #4a4a4a, 1px -1px 0 #4a4a4a, -1px 1px 0 #4a4a4a,
+      1px 1px 0 #4a4a4a;
+    border-bottom: 5px solid black;
+  }
+}
+header {
+  text-align: center;
+  color: white;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.title {
+  font-size: 4em;
+  font-weight: 900;
+  color: #fe9534;
+  text-shadow: -2px -2px 0 #4a4a4a, 2px -2px 0 #4a4a4a, -2px 2px 0 #4a4a4a,
+    2px 2px 0 #4a4a4a;
+  border-bottom: 5px solid black;
+}
+.title>span:hover {
+  animation-name: colorAnimation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.navItem {
+  font-size: 2.3em;
+  text-align: center;
+  background-color: rgb(74, 74, 74);
+  padding: 5px;
+}
+.navItem:hover {
+  cursor: pointer;
+
+  background-color: rgba(74, 74, 74, 0.5);
+}
+.selected {
+  background-color: rgb(254, 150, 52);
+}
+.selected:hover {
+  background-color: rgba(254, 150, 52, 0.5);
+}
+
+.content {
+  display: none;
+}
+.main_main {
+  padding-top: 2em;
+  text-align: center;
+}
+.mainPageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 70vh;
+}
+.mainBtn {
+  width: 60%;
+  padding: 0.2em;
+  font-size: 4em;
+  font-weight: 900;
+  background-color: #4a4a4a;
+  color: white;
+}
+.mainHisBtn{
+  background-image: url(./history_bg.png);
+}
+.mainFasBtn{
+  background-image: url(./fashion_bg.jpeg);
+}
+.mainTechBtn{
+  background-image: url(./tech_bg.jpeg);
+}
+.mainBtn:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+.container {
+  text-align: center;
+}
+.detail {
+  width: 100%;
+  border: none;
+  height: 80vh;
+}
+.mainPageTitle {
+  margin-top: 25px;
+  font-size: 3em;
+  font-weight: 600;
+}
+.news {
+  border: 3px solid #4a4a4a;
+  margin-top: 1em;
+  width: 70%;
+  height: 70vh;
+}
+.btnContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.btn {
+  margin-left: 8px;
+  margin-right: 8px;
+  background-color: #4a4a4a;
+  height: 4em;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.btn:hover {
+  border: 5px solid #fe9534;
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
